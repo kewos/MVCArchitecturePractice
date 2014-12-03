@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVCArchitecturePractice.Core.Data.Message>
+@using MVCArchitecturePractice.Web.Models
+<a id="createEditBookModal" href="@Url.Action("SendMessage")">
+    Send
+</a>
+<table>
+    @foreach (var message in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => message.UserId)
+            </td>
+            <td width="200">
+                @Html.DisplayFor(modelItem => message.Comment)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "CreateEditMessage", new { id = message.ID }) |
+                @Html.ActionLink("Details", "DetailMessage", new { id = message.ID }) |
+                @Html.ActionLink("Delete", "DeleteMessage", new { id = message.ID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>

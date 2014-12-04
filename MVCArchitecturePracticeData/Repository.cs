@@ -30,14 +30,6 @@ namespace MVCArchitecturePractice.Data
             }
         }
 
-        public IQueryable<TEntity> Table
-        {
-            get
-            {
-                return this.Entities;
-            }
-        }
-
         public TEntity GetById(object id)
         {
             return Entities.Find(id);
@@ -74,7 +66,7 @@ namespace MVCArchitecturePractice.Data
             }
         }
 
-        public void Remove(TEntity entity)
+        public void Delete(TEntity entity)
         {
             try
             {
@@ -87,6 +79,14 @@ namespace MVCArchitecturePractice.Data
             }
             catch (Exception e)
             {
+            }
+        }
+
+        public IQueryable<TEntity> Table
+        {
+            get
+            {
+                return this.Entities;
             }
         }
     }

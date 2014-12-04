@@ -1,0 +1,11 @@
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Core.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Data.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\EntityFramework.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Core.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Data.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\EntityFramework.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\obj\Debug\MVCArchitecturePractice.Service.csprojResolveAssemblyReference.cache
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\obj\Debug\MVCArchitecturePractice.Service.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\obj\Debug\MVCArchitecturePractice.Service.pdb

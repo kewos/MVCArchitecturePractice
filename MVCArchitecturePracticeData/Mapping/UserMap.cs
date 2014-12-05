@@ -18,7 +18,7 @@ namespace MVCArchitecturePractice.Data.Mapping
             Property(t => t.ModifiedDate).IsRequired();
 
             //Table
-            ToTable("Customer");
+            ToTable("User");
         }
     }
 }

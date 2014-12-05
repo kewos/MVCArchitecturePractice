@@ -5,22 +5,22 @@ using System.Web;
 using System.Web.Mvc;
 using MVCArchitecturePractice.Data;
 using MVCArchitecturePractice.Core.Data;
+using MVCArchitecturePractice.Service;
 
 namespace MVCArchitecturePractice.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private UnitOfWorker unitOfWork = new UnitOfWorker();
-        private Repository<Message> messageRepository;
+        private IMessageBoard messageBoard;
 
-        public HomeController()
+        public HomeController(IMessageBoard messageBoard)
         {
-            messageRepository = unitOfWork.Repository<Message>();
+            this.messageBoard = messageBoard;
         }
 
         public ActionResult Index()
         {
-            IEnumerable<Message> messages =  messageRepository.Table.ToList();
+            var messages = messageBoard.GetMessages();
             return View(messages);
         }
 
@@ -31,14 +31,14 @@ namespace MVCArchitecturePractice.Web.Controllers
             model.AddedDate = System.DateTime.Now;
             model.UserId = 1;
             model.Comment = "test";
-            messageRepository.Insert(model);
+            messageBoard.InsertMessage(model);
             return RedirectToAction("Index");
         }
 
         public ActionResult DetailMessage(int id)
         {
-            var model = messageRepository.GetById(id);
-            return View(model);
+            //var model = messageBoard.GetById(id);
+            return View();
         }
 
         public ActionResult About()

@@ -1,31 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Microsoft.Practices.Unity;
 using MVCArchitecturePractice.Data;
 using MVCArchitecturePractice.Core.Data;
+using MVCArchitecturePractice.Service;
+using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
 
 namespace MVCArchitecturePractice.Web.App_Start
 {
     public class UnityConfig
     {
-        private static Lazy<IUnityContainer> container = new Lazy<IUnityContainer>(() =>
-        {
-            var container = new UnityContainer();
-            RegisterTypes(container);
-            return container;
-        });
+        private static Lazy<IUnityContainer> container = 
+            new Lazy<IUnityContainer>(() => new UnityContainer());
 
-        public static IUnityContainer GetContainer()
+        public static IUnityContainer GetConfiguredContainer()
         {
             return container.Value;
-        }
-
-        public static void RegisterTypes(IUnityContainer container)
-        {
-            var context = new MyDbContext();
-            container.RegisterType<IRepository<Message>, Repository<Message>>(new InjectionConstructor(context));
         }
     }
 }

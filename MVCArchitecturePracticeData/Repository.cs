@@ -8,7 +8,8 @@ using System.Data.Entity;
 
 namespace MVCArchitecturePractice.Data
 {
-    public class Repository<TEntity> where TEntity : BaseEntity
+    public class Repository<TEntity> : IRepository<TEntity>
+        where TEntity : BaseEntity
     {
         private readonly MyDbContext context;
         private IDbSet<TEntity> entities;

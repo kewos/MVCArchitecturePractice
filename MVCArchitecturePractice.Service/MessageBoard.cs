@@ -8,7 +8,7 @@ using MVCArchitecturePractice.Data;
 
 namespace MVCArchitecturePractice.Service
 {
-    public class MessageBoard : MVCArchitecturePractice.Service.IMessageBoard
+    public class MessageBoard : IMessageBoard
     {
         private IRepository<User> userRepository;
         private IRepository<Message> messageRepository;

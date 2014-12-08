@@ -4,7 +4,7 @@ using MVCArchitecturePractice.Core.Data;
 
 namespace MVCArchitecturePractice.Data.Mapping
 {
-    class MessageMap : EntityTypeConfiguration<Message>
+    public class MessageMap : EntityTypeConfiguration<Message>
     {
         public MessageMap()
        {

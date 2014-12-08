@@ -16,9 +16,7 @@ namespace MVCArchitecturePractice.Web
         public static IUnityContainer Initial()
         {
             var container = BuildUnityContainer();
-
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
-
             return container;
         }
 
@@ -36,7 +34,7 @@ namespace MVCArchitecturePractice.Web
             container.RegisterType<IRepository<Message>, Repository<Message>>();
 
             //Service
-            container.RegisterType<IMessageBoard, MessageBoard>();
+            container.RegisterType<IMessageBoardService, MessageBoardService>();
         }
     }
 }

@@ -8,12 +8,12 @@ using MVCArchitecturePractice.Data;
 
 namespace MVCArchitecturePractice.Service
 {
-    public class MessageBoard : IMessageBoard
+    public class MessageBoardService : IMessageBoardService
     {
         private IRepository<User> userRepository;
         private IRepository<Message> messageRepository;
 
-        public MessageBoard(IRepository<User> userRepository, IRepository<Message> messageRepository)
+        public MessageBoardService(IRepository<User> userRepository, IRepository<Message> messageRepository)
         {
             this.userRepository = userRepository;
             this.messageRepository = messageRepository;
@@ -24,7 +24,7 @@ namespace MVCArchitecturePractice.Service
             return messageRepository.Table;
         }
 
-        public Message GetMessages(long id)
+        public Message GetMessage(long id)
         {
             return messageRepository.GetById(id);
         }

@@ -11,17 +11,16 @@ namespace MVCArchitecturePractice.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IMessageBoard messageBoard;
+        private IMessageBoardService messageBoard;
 
-        public HomeController(IMessageBoard messageBoard)
+        public HomeController(IMessageBoardService messageBoard)
         {
             this.messageBoard = messageBoard;
         }
 
         public ActionResult Index()
         {
-            var messages = messageBoard.GetMessages();
-            return View(messages);
+            return View(messageBoard.GetMessages());
         }
 
         public ActionResult SendMessage()
@@ -37,21 +36,18 @@ namespace MVCArchitecturePractice.Web.Controllers
 
         public ActionResult DetailMessage(int id)
         {
-            //var model = messageBoard.GetById(id);
-            return View();
+            return View(messageBoard.GetMessage(id));
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

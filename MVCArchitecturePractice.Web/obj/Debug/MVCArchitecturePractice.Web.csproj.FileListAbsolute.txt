@@ -117,3 +117,16 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microso
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\obj\Debug\MVCArchitecturePractice.Web.csprojResolveAssemblyReference.cache
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\obj\Debug\MVCArchitecturePractice.Web.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\obj\Debug\MVCArchitecturePractice.Web.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\MVCArchitecturePractice.Service.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\MVCArchitecturePractice.Service.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.Mvc.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Practices.Unity.Mvc.xml

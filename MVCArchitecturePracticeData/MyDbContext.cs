@@ -4,8 +4,6 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using MVCArchitecturePractice.Core;
 
 namespace MVCArchitecturePractice.Data
@@ -14,8 +12,6 @@ namespace MVCArchitecturePractice.Data
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
-          
             foreach (var type in 
                 Assembly.GetExecutingAssembly().GetTypes()
                 .Where(type => !String.IsNullOrEmpty(type.Namespace)
@@ -26,6 +22,7 @@ namespace MVCArchitecturePractice.Data
                 dynamic configurationInstance = Activator.CreateInstance(type);
                 modelBuilder.Configurations.Add(configurationInstance);
             }
+
             base.OnModelCreating(modelBuilder);
         }
 

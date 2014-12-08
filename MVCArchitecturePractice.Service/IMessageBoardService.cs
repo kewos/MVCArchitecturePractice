@@ -3,9 +3,9 @@ using MVCArchitecturePractice.Core.Data;
 
 namespace MVCArchitecturePractice.Service
 {
-    public interface IMessageBoard
+    public interface IMessageBoardService
     {
-        Message GetMessages(long id);
+        Message GetMessage(long id);
         void InsertMessage(Message message);
         void UpdateMessage(Message message);
         void DeleteMessage(Message message);

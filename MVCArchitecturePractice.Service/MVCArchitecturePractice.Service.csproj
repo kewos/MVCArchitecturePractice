@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageBoard.cs" />
-    <Compile Include="IMessageBoard.cs" />
+    <Compile Include="MessageBoardService.cs" />
+    <Compile Include="IMessageBoardService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

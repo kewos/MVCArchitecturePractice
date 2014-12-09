@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using MVCArchitecturePractice.Core.Data;
+using MVCArchitecturePractice.Core.Entities;
 
 namespace MVCArchitecturePractice.Data.Mapping
 {

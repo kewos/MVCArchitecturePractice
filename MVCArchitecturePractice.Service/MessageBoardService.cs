@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MVCArchitecturePractice.Core.Data;
-using MVCArchitecturePractice.Data;
+using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Data.Contrast;
 
 namespace MVCArchitecturePractice.Service
 {

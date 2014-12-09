@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity;
-using MVCArchitecturePractice.Core;
 
-namespace MVCArchitecturePractice.Data
+namespace MVCArchitecturePractice.Data.Contrast
 {
     public interface IDbContext
     {
-        IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity;
+        IDbSet<TEntity> Set<TEntity>() 
+            where TEntity : MVCArchitecturePractice.Core.Entities.BaseEntity;
         int SaveChanges();
     }
 }

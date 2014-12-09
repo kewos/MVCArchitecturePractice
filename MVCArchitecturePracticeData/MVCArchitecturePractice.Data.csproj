@@ -49,8 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\Extension\AssemblyExtension.cs" />
     <Compile Include="Contrast\IRepository.cs" />
-    <Compile Include="MyDbContext.cs" />
+    <Compile Include="Context\MyDbContext.cs" />
     <Compile Include="Contrast\IDbContext.cs" />
     <Compile Include="Mapping\MessageMap.cs" />
     <Compile Include="Mapping\UserMap.cs" />

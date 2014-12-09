@@ -6,7 +6,8 @@ using System.Web.Mvc;
 using Microsoft.Practices.Unity.Mvc;
 using Microsoft.Practices.Unity;
 using MVCArchitecturePractice.Service;
-using MVCArchitecturePractice.Core.Data;
+using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Data.Contrast;
 using MVCArchitecturePractice.Data;
 
 namespace MVCArchitecturePractice.Web

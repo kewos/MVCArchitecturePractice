@@ -1,5 +1,5 @@
 ﻿using System;
-using MVCArchitecturePractice.Core.Data;
+using MVCArchitecturePractice.Core.Entities;
 
 namespace MVCArchitecturePractice.Service
 {

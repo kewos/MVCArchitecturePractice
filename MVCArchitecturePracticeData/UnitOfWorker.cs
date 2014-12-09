@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MVCArchitecturePractice.Core;
+using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Data.Context;
 
 namespace MVCArchitecturePractice.Data
 {

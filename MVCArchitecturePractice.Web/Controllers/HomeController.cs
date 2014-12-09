@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVCArchitecturePractice.Data;
-using MVCArchitecturePractice.Core.Data;
+using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Service;
 
 namespace MVCArchitecturePractice.Web.Controllers

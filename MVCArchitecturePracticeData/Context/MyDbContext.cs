@@ -4,22 +4,19 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Reflection;
-using MVCArchitecturePractice.Core;
+using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Data.Contrast;
 
-namespace MVCArchitecturePractice.Data
+namespace MVCArchitecturePractice.Data.Context
 {
     public class MyDbContext : DbContext, IDbContext
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            foreach (var type in 
-                Assembly.GetExecutingAssembly().GetTypes()
-                .Where(type => !String.IsNullOrEmpty(type.Namespace)
-                    && type.BaseType != null && type.BaseType.IsGenericType 
-                    && type.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
-            )
+            var mappings = GetType().Assembly.GetInheritedTypes(typeof(EntityTypeConfiguration<>));
+            foreach (var mapping in mappings)
             {
-                dynamic configurationInstance = Activator.CreateInstance(type);
+                dynamic configurationInstance = Activator.CreateInstance(mapping);
                 modelBuilder.Configurations.Add(configurationInstance);
             }
 

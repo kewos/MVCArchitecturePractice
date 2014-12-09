@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MVCArchitecturePractice.Core;
 using System.Data.Entity;
+using MVCArchitecturePractice.Data.Contrast;
+using MVCArchitecturePractice.Data.Context;
 
 namespace MVCArchitecturePractice.Data
 {
     public class Repository<TEntity> : IRepository<TEntity>
-        where TEntity : BaseEntity
+        where TEntity : MVCArchitecturePractice.Core.Entities.BaseEntity
     {
         private readonly MyDbContext context;
         private IDbSet<TEntity> entities;

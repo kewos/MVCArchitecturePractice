@@ -8,6 +8,7 @@ using Microsoft.Practices.Unity;
 using MVCArchitecturePractice.Service;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Data.Contrast;
+using MVCArchitecturePractice.Data.Context;
 using MVCArchitecturePractice.Data;
 
 namespace MVCArchitecturePractice.Web
@@ -30,12 +31,17 @@ namespace MVCArchitecturePractice.Web
 
         public static void RegisterTypes(IUnityContainer container)
         {
+            //context
+            var context = new MyDbContext();
+            container.RegisterType<IDbContext, MyDbContext>();
+
             //Repository
-            container.RegisterType<IRepository<User>, Repository<User>>();
-            container.RegisterType<IRepository<Message>, Repository<Message>>();
+            container.RegisterType<IRepository<User>, Repository<User>>(new InjectionConstructor(context));
+            container.RegisterType<IRepository<Message>, Repository<Message>>(new InjectionConstructor(context));
 
             //Service
             container.RegisterType<IMessageBoardService, MessageBoardService>();
+            //var context = new MyDbContext();
         }
     }
 }

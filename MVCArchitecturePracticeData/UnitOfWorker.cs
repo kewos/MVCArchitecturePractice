@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Data.Context;
+using MVCArchitecturePractice.Data.Contrast;
 
 namespace MVCArchitecturePractice.Data
 {
@@ -47,7 +48,7 @@ namespace MVCArchitecturePractice.Data
             disposed = true;
         }
 
-        public Repository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
+        public IRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {
             if (repositories == null)
             {

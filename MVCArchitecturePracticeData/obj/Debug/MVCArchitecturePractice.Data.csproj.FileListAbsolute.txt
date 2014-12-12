@@ -10,8 +10,6 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeCore\MVCArchitec
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeCore\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Core.pdb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeCore\MVCArchitecturePracticeData\obj\Debug\MVCArchitecturePractice.Data.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeCore\MVCArchitecturePracticeData\obj\Debug\MVCArchitecturePractice.Data.pdb
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.dll.config
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.pdb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\EntityFramework.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\EntityFramework.SqlServer.dll
@@ -20,5 +18,7 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\E
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\EntityFramework.SqlServer.xml
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Core.pdb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\obj\Debug\MVCArchitecturePractice.Data.csprojResolveAssemblyReference.cache
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\obj\Debug\MVCArchitecturePractice.Data.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\obj\Debug\MVCArchitecturePractice.Data.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.dll.config
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeData\obj\Debug\MVCArchitecturePractice.Data.dll

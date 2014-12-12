@@ -13,9 +13,12 @@ namespace MVCArchitecturePractice.Data.Mapping
 
             //Property
             Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(t => t.Name).IsRequired().HasMaxLength(12);
-            Property(t => t.AddedDate).IsRequired();
-            Property(t => t.ModifiedDate).IsRequired();
+            Property(t => t.Name).IsRequired().HasMaxLength(20).HasColumnType("nvarchar");
+            Property(t => t.Password).IsRequired().HasMaxLength(20).HasColumnType("nvarchar");
+            Property(t => t.Address).IsRequired().HasMaxLength(100).HasColumnType("nvarchar");
+            Property(t => t.Email).IsRequired().HasMaxLength(100).HasColumnType("nvarchar");
+            Property(t => t.AddDate).IsRequired();
+            Property(t => t.ModifyDate).IsRequired();
 
             //Table
             ToTable("User");

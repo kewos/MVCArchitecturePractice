@@ -6,20 +6,25 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using MVCArchitecturePractice.Data.Contrast;
 using MVCArchitecturePractice.Data.Context;
+using MVCArchitecturePractice.Core.Entities;
 
 namespace MVCArchitecturePractice.Data
 {
-    public class Repository<TEntity> : IRepository<TEntity>
-        where TEntity : MVCArchitecturePractice.Core.Entities.BaseEntity
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
+        #region Property
         private readonly MyDbContext context;
         private IDbSet<TEntity> entities;
+        #endregion
 
+        #region constructor
         public Repository(MyDbContext context)
         {
             this.context = context;
         }
+        #endregion
 
+        #region IRepository<TEntity> Member
         public IDbSet<TEntity> Entities
         {
             get
@@ -91,5 +96,11 @@ namespace MVCArchitecturePractice.Data
                 return this.Entities;
             }
         }
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return this.Entities;
+        }
+        #endregion
     }
 }

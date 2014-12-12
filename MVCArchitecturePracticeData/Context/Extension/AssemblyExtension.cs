@@ -7,14 +7,16 @@ namespace MVCArchitecturePractice
 {
     public static class AssemblyExtension
     {
-        public static List<Type> GetInheritedTypes(this Assembly assembly, Type type)
+        public static List<Type> GetInheritedTypes(this Assembly assembly, Type inheritedTypes)
         {
             return assembly.GetTypes()
-                .Where(x =>
-                    x.BaseType != null 
-                    && x.BaseType.Namespace == type.BaseType.Namespace
-                    && x.BaseType.Name == type.BaseType.Name)
-                .ToList();
+              .Where(type => !String.IsNullOrEmpty(type.Namespace))
+              .Where(type =>
+                  type.BaseType != null 
+                  && type.BaseType.IsGenericType
+                  && type.BaseType.GetGenericTypeDefinition() == inheritedTypes)
+                  .ToList();
+                   
         }
     }
 }

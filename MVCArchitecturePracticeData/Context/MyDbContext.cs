@@ -13,7 +13,7 @@ namespace MVCArchitecturePractice.Data.Context
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var mappings = GetType().Assembly.GetInheritedTypes(typeof(EntityTypeConfiguration<>));
+            var mappings = Assembly.GetExecutingAssembly().GetInheritedTypes(typeof(EntityTypeConfiguration<>));
             foreach (var mapping in mappings)
             {
                 dynamic configurationInstance = Activator.CreateInstance(mapping);

@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCArchitecturePractice.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCArchitecturePractice.Common", "MVCArchitecturePractice.Common\MVCArchitecturePractice.Common.csproj", "{C5B79062-C893-4959-BA0A-374DCA5ED437}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCArchitecturePractice.Test", "MVCArchitecturePractice.Test\MVCArchitecturePractice.Test.csproj", "{7DCE3972-8A4A-48AA-9822-72CD3402893E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C5B79062-C893-4959-BA0A-374DCA5ED437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5B79062-C893-4959-BA0A-374DCA5ED437}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5B79062-C893-4959-BA0A-374DCA5ED437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DCE3972-8A4A-48AA-9822-72CD3402893E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DCE3972-8A4A-48AA-9822-72CD3402893E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DCE3972-8A4A-48AA-9822-72CD3402893E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DCE3972-8A4A-48AA-9822-72CD3402893E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

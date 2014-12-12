@@ -14,8 +14,8 @@ namespace MVCArchitecturePractice.Data.Mapping
            //Properties
            Property(t => t.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
            Property(t => t.Comment).IsRequired().HasMaxLength(100).HasColumnType("nvarchar");
-           Property(t => t.AddedDate).IsRequired();
-           Property(t => t.ModifiedDate).IsRequired();
+           Property(t => t.AddDate).IsRequired();
+           Property(t => t.ModifyDate).IsRequired();
 
            //Table
            ToTable("Message");

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C5B79062-C893-4959-BA0A-374DCA5ED437}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MVCArchitecturePractice.Common</RootNamespace>
     <AssemblyName>MVCArchitecturePractice.Common</AssemblyName>
@@ -57,10 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aop\LogHandler.cs" />
-    <Compile Include="Attributes\LogAttribute.cs" />
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Aops\LoggerHandler.cs" />
+    <Compile Include="Attributes\LoggerAttribute.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Extensions\LinqExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,7 +66,7 @@
     <Compile Include="Utils\Logger\ILoggerFactory.cs" />
     <Compile Include="Utils\Logger\Logger.cs" />
     <Compile Include="Utils\Logger\LoggerFactory.cs" />
-    <Compile Include="Utils\Logger\LoggerFactoryMaker.cs" />
+    <Compile Include="Utils\Logger\LoggerFactoryManager.cs" />
     <Compile Include="Utils\Util.cs" />
   </ItemGroup>
   <ItemGroup />

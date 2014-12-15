@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCArchitecturePractice.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCArchitecturePractice.Data", "MVCArchitecturePracticeData\MVCArchitecturePractice.Data.csproj", "{BEE9F67D-2719-4C06-B4DB-8E3EFBFE93CD}"
 	ProjectSection(ProjectDependencies) = postProject
+		{C5B79062-C893-4959-BA0A-374DCA5ED437} = {C5B79062-C893-4959-BA0A-374DCA5ED437}
 		{DFAEFB6E-4A56-4905-B676-EF5C4CE15880} = {DFAEFB6E-4A56-4905-B676-EF5C4CE15880}
 	EndProjectSection
 EndProject

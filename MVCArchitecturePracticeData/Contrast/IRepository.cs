@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using MVCArchitecturePractice.Core.Entities;
 using System.Collections.Generic;
+using MVCArchitecturePractice.Common.Attributes;
 
 namespace MVCArchitecturePractice.Data.Contrast
 {
@@ -11,27 +12,32 @@ namespace MVCArchitecturePractice.Data.Contrast
         /// 取得全部
         /// </summary>
         /// <returns></returns>
+        [Logger]
         IEnumerable<TEntity> GetAll();
 
         /// <summary>
         /// 取得實體透過ID
         /// </summary>
         /// <returns></returns>
+        [Logger]
         TEntity GetById(object id);
 
         /// <summary>
-        /// Insert
+        /// Insert 實體
         /// </summary>
+        [Logger]
         void Insert(TEntity entity);
 
         /// <summary>
-        /// Update
+        /// Update 實體
         /// </summary>
+        [Logger]
         void Update(TEntity entity);
 
         /// <summary>
-        /// Delete
+        /// Delete 實體
         /// </summary>
+        [Logger]
         void Delete(TEntity entity);
     }
 }

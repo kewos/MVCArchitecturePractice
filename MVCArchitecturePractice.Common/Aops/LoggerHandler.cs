@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using MVCArchitecturePractice.Common.Utils.Logger;
 
-namespace MVCArchitecturePractice.Common.Aop
+namespace MVCArchitecturePractice.Common.Aops
 {
     public class LoggerHandler : ICallHandler
     {
@@ -17,8 +17,8 @@ namespace MVCArchitecturePractice.Common.Aop
         {
             IMethodReturn result = getNext()(input, getNext);
 
-            LoggerFactoryMaker.SetFactory<LoggerFactory>();
-            LoggerFactoryMaker.Create.Log("Log");
+            LoggerFactoryManager.SetFactory<LoggerFactory>();
+            LoggerFactoryManager.Create.Log("Log");
 
             return result;
         }

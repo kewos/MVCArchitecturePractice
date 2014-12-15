@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Common.Utils.Logger
 {
-    public static class LoggerFactoryMaker
+    public static class LoggerFactoryManager
     {
         private static ILoggerFactory factory = null;
 
+        /// <summary>
+        /// Set Factory Type with T
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
         public static void SetFactory<T>()
             where T : ILoggerFactory
         {
@@ -19,6 +23,9 @@ namespace MVCArchitecturePractice.Common.Utils.Logger
             }
         }
 
+        /// <summary>
+        /// Create Logger
+        /// </summary>
         public static ILogger Create
         {
             get

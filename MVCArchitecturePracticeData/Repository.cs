@@ -36,7 +36,7 @@ namespace MVCArchitecturePractice.Data
                 return entities;
             }
         }
-
+ 
         public TEntity GetById(object id)
         {
             return Entities.Find(id);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Common.Utils.Logger
 {
-    public class LoggerFactory : ILoggerFactory
+    internal class LoggerFactory : ILoggerFactory
     {
         public ILogger Create()
         {

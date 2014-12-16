@@ -4,22 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.Unity.InterceptionExtension;
-using MVCArchitecturePractice.Common.Utils.Logger;
 
 namespace MVCArchitecturePractice.Common.Aops
 {
-    internal class LoggerHandler : ICallHandler
+    public class CatchExceptionHandler : ICallHandler
     {
-        #region ICallHandler 成員
         public int Order { get; set; }
 
         public IMethodReturn Invoke(IMethodInvocation input, GetNextHandlerDelegate getNext)
         {
-            IMethodReturn result = getNext()(input, getNext);
-            LoggerFactoryManager.SetFactory<LoggerFactory>();
-            LoggerFactoryManager.Create.Log(input.MethodBase.Name);
+            IMethodReturn result = null;
+
+            try
+            {
+                result = getNext()(input, getNext);
+            }
+            catch (Exception e)
+            { 
+            }
+
             return result;
         }
-        #endregion
     }
 }

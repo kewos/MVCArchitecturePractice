@@ -5,11 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.Practices.Unity.Mvc;
 using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.InterceptionExtension;
 using MVCArchitecturePractice.Service;
 using MVCArchitecturePractice.Core.Entities;
-using MVCArchitecturePractice.Data.Contrast;
+using MVCArchitecturePractice.Data.Contrast.Repositories;
+using MVCArchitecturePractice.Data.Contrast.Context;
+using MVCArchitecturePractice.Data.Repositories;
 using MVCArchitecturePractice.Data.Context;
-using MVCArchitecturePractice.Data;
 
 namespace MVCArchitecturePractice.Web
 {
@@ -24,24 +26,28 @@ namespace MVCArchitecturePractice.Web
 
         private static IUnityContainer BuildUnityContainer()
         {
-            var container = new UnityContainer();
+            IUnityContainer container = new UnityContainer();
+            container.AddNewExtension<Interception>();
             RegisterTypes(container);
             return container;
         }
 
         public static void RegisterTypes(IUnityContainer container)
         {
-            //context
-            var context = new MyDbContext();
+
             container.RegisterType<IDbContext, MyDbContext>();
 
             //Repository
-            container.RegisterType<IRepository<User>, Repository<User>>(new InjectionConstructor(context));
-            container.RegisterType<IRepository<Message>, Repository<Message>>(new InjectionConstructor(context));
+            container.RegisterType<IUserRepository, UserRepository>()
+                .Configure<Interception>()
+                .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
+
+            container.RegisterType<IMessageRepository, MessageRepository>()
+                .Configure<Interception>()
+                .SetInterceptorFor<IMessageRepository>(new InterfaceInterceptor());
 
             //Service
             container.RegisterType<IMessageBoardService, MessageBoardService>();
-            //var context = new MyDbContext();
         }
     }
 }

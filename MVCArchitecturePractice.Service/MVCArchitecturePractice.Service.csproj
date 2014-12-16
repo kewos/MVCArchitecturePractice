@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MessageBoardService.cs" />
-    <Compile Include="IMessageBoardService.cs" />
+    <Compile Include="Contrast\IMessageBoardService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

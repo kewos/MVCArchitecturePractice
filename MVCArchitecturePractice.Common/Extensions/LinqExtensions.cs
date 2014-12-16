@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Common.Extendsions
 {
-    class LinqExtensions
+    public static class LinqExtensions
     {
+        public static void ForEach<T>(this IEnumerable<T> elements, Action<T> action)
+        {
+            foreach (T element in elements)
+            {
+                action(element);
+            }
+        }
     }
 }

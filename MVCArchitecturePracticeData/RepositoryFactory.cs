@@ -7,11 +7,11 @@ using MVCArchitecturePractice.Data.Contrast;
 
 namespace MVCArchitecturePractice.Data
 {
-    public class RepositoryFactory : IRepositoryFactory
-    {
-        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : Core.Entities.BaseEntity, new()
-        {
-            throw new NotImplementedException();
-        }
-    }
+    //public class RepositoryFactory : IRepositoryFactory
+    //{
+    //    public IRepository<TEntity> GetRepository<TEntity>() where TEntity : Core.Entities.BaseEntity, new()
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
 }

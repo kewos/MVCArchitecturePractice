@@ -57,7 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aops\CatchExceptionHandler.cs" />
     <Compile Include="Aops\LoggerHandler.cs" />
+    <Compile Include="Attributes\CatchExceptionAttribute.cs" />
     <Compile Include="Attributes\LoggerAttribute.cs" />
     <Compile Include="Exceptions\Exceptions.cs" />
     <Compile Include="Extensions\LinqExtensions.cs" />

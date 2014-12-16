@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Common.Utils.Logger
 {
-    public interface ILogger
+    internal interface ILogger
     {
         /// <summary>
         /// Log

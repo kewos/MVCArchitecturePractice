@@ -25,8 +25,8 @@ namespace MVCArchitecturePractice.Web.Controllers
         public ActionResult SendMessage()
         {
             var model = new Message();
-            model.ModifiedDate = System.DateTime.Now;
-            model.AddedDate = System.DateTime.Now;
+            model.ModifyDate = System.DateTime.Now;
+            model.AddDate = System.DateTime.Now;
             model.UserId = 1;
             model.Comment = "test";
             messageBoard.InsertMessage(model);

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using MVCArchitecturePractice.Common.Attributes;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
-using MVCArchitecturePractice.Data.Contrast;
+using MVCArchitecturePractice.Data.Contrast.Repositories;
+using MVCArchitecturePractice.Data.Repositories;
 using MVCArchitecturePractice.Data.Context;
 using MVCArchitecturePractice.Core.Entities;
 
@@ -16,15 +17,14 @@ namespace MVCArchitecturePractice.Data
     {
         public static void Main()
         {
-            var context = new MyDbContext();
             IUnityContainer container = new UnityContainer();
             container.AddNewExtension<Interception>();
             container
-                .RegisterType<IRepository<User>, Repository<User>>(new InjectionConstructor(context))
+                .RegisterType<IUserRepository, UserRepository>()
                 .Configure<Interception>()
-                .SetInterceptorFor<IRepository<User>>(new InterfaceInterceptor());
+                .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
 
-            var user = container.Resolve<IRepository<User>>();
+            var user = container.Resolve<IUserRepository>();
             user.GetById(1);
         }
     }

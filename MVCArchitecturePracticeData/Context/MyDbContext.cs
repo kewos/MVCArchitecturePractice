@@ -5,7 +5,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Reflection;
 using MVCArchitecturePractice.Core.Entities;
-using MVCArchitecturePractice.Data.Contrast;
+using MVCArchitecturePractice.Data.Contrast.Context;
 
 namespace MVCArchitecturePractice.Data.Context
 {

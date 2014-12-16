@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using MVCArchitecturePractice.Core.Entities;
-using MVCArchitecturePractice.Data.Contrast;
+using MVCArchitecturePractice.Data.Contrast.Repositories;
 
 namespace MVCArchitecturePractice.Service
 {
     public class MessageBoardService : IMessageBoardService
     {
-        private IRepository<User> userRepository;
-        private IRepository<Message> messageRepository;
+        private IUserRepository userRepository;
+        private IMessageRepository messageRepository;
 
-        public MessageBoardService(IRepository<User> userRepository, IRepository<Message> messageRepository)
+        public MessageBoardService(IUserRepository userRepository, IMessageRepository messageRepository)
         {
             this.userRepository = userRepository;
             this.messageRepository = messageRepository;
         }
 
-        public IQueryable<Message> GetMessages()
+        public IEnumerable<Message> GetMessages()
         {
-            return messageRepository.Table;
+            return messageRepository.GetAll();
         }
 
         public Message GetMessage(long id)

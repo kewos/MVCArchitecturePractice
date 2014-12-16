@@ -3,7 +3,7 @@ using MVCArchitecturePractice.Core.Entities;
 using System.Collections.Generic;
 using MVCArchitecturePractice.Common.Attributes;
 
-namespace MVCArchitecturePractice.Data.Contrast
+namespace MVCArchitecturePractice.Data.Contrast.Repositories
 {
     public interface IRepository<TEntity> 
         where TEntity : BaseEntity
@@ -19,24 +19,28 @@ namespace MVCArchitecturePractice.Data.Contrast
         /// 取得實體透過ID
         /// </summary>
         /// <returns></returns>
+        [CatchException]
         [Logger]
-        TEntity GetById(object id);
+        TEntity GetById(long id);
 
         /// <summary>
         /// Insert 實體
         /// </summary>
+        [CatchException]
         [Logger]
         void Insert(TEntity entity);
 
         /// <summary>
         /// Update 實體
         /// </summary>
+        [CatchException]
         [Logger]
         void Update(TEntity entity);
 
         /// <summary>
         /// Delete 實體
         /// </summary>
+        [CatchException]
         [Logger]
         void Delete(TEntity entity);
     }

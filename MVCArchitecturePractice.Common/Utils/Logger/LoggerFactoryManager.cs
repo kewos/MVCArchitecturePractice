@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Common.Utils.Logger
 {
-    public static class LoggerFactoryManager
+    internal static class LoggerFactoryManager
     {
         private static ILoggerFactory factory = null;
 
@@ -14,7 +14,7 @@ namespace MVCArchitecturePractice.Common.Utils.Logger
         /// Set Factory Type with T
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public static void SetFactory<T>()
+        internal static void SetFactory<T>()
             where T : ILoggerFactory
         {
             if (factory == (ILoggerFactory)null || factory.GetType() != typeof(T))
@@ -26,7 +26,7 @@ namespace MVCArchitecturePractice.Common.Utils.Logger
         /// <summary>
         /// Create Logger
         /// </summary>
-        public static ILogger Create
+        internal static ILogger Create
         {
             get
             {

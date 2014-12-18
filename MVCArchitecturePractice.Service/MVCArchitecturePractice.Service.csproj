@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D551BF24-EB69-4E24-8F6B-14C642CF9FFA}</ProjectGuid>
+    <ProjectGuid>{7CF1685A-2310-4BA0-B9E7-6CAADF4F183C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MVCArchitecturePractice.Service</RootNamespace>
@@ -29,27 +29,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="MVCArchitecturePractice.Core">
+      <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="MVCArchitecturePractice.Core.Contrast">
+      <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.Contrast.dll</HintPath>
     </Reference>
-    <Reference Include="MVCArchitecturePractice.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
+    <Reference Include="MVCArchitecturePractice.Data.Contrast">
+      <HintPath>..\MVCArchitecturePractice.Data.Contrast\bin\Debug\MVCArchitecturePractice.Data.Contrast.dll</HintPath>
     </Reference>
-    <Reference Include="MVCArchitecturePractice.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.dll</HintPath>
+    <Reference Include="MVCArchitecturePractice.Service.Contrast">
+      <HintPath>..\MVCArchitecturePractice.Service.Contrast\bin\Debug\MVCArchitecturePractice.Service.Contrast.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,12 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MessageBoardService.cs" />
-    <Compile Include="Contrast\IMessageBoardService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

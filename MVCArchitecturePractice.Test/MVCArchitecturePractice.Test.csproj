@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DCE3972-8A4A-48AA-9822-72CD3402893E}</ProjectGuid>
+    <ProjectGuid>{3D9C9806-92B1-401F-BE7A-750449232FA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MVCArchitecturePractice.Test</RootNamespace>

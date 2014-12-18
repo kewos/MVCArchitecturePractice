@@ -13,17 +13,17 @@ namespace MVCArchitecturePractice.Common.Aops
 
         public IMethodReturn Invoke(IMethodInvocation input, GetNextHandlerDelegate getNext)
         {
-            IMethodReturn result = null;
 
             try
             {
-                result = getNext()(input, getNext);
+                IMethodReturn result = getNext()(input, getNext);
             }
-            catch (Exception e)
+            catch(Exception e)
             { 
             }
 
-            return result;
+
+            return null;
         }
     }
 }

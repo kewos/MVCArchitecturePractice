@@ -7,6 +7,7 @@ using Microsoft.Practices.Unity.Mvc;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using MVCArchitecturePractice.Service;
+using MVCArchitecturePractice.Service.Contrast;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Data.Contrast.Repositories;
 using MVCArchitecturePractice.Data.Contrast.Context;
@@ -17,9 +18,22 @@ namespace MVCArchitecturePractice.Web
 {
     public static class Bootstrapper
     {
+        private static List<Action<IUnityContainer>> UnityConfig
+        {
+            get
+            {
+                return new List<Action<IUnityContainer>>
+                {
+                    RegisterDBContextConfig,
+                    RegisterRepositoryConfig,
+                    RegisterServiceConfig
+                };
+            }
+        }
+
         public static IUnityContainer Initial()
         {
-            var container = BuildUnityContainer();
+            IUnityContainer container = BuildUnityContainer();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
             return container;
         }
@@ -28,26 +42,40 @@ namespace MVCArchitecturePractice.Web
         {
             IUnityContainer container = new UnityContainer();
             container.AddNewExtension<Interception>();
-            RegisterTypes(container);
+            RegisterConfig(container);
             return container;
         }
 
-        public static void RegisterTypes(IUnityContainer container)
+        /// <summary>
+        /// 透過Unity 載入設定
+        /// </summary>
+        /// <param name="container"></param>
+        public static void RegisterConfig(IUnityContainer container)
         {
+            UnityConfig.ForEach(config => config(container));
+        }
 
+        #region private method
+        private static void RegisterDBContextConfig(IUnityContainer container)
+        {
             container.RegisterType<IDbContext, MyDbContext>();
+        }
 
-            //Repository
+        private static void RegisterRepositoryConfig(IUnityContainer container)
+        {
             container.RegisterType<IUserRepository, UserRepository>()
-                .Configure<Interception>()
-                .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
+               .Configure<Interception>()
+               .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
 
             container.RegisterType<IMessageRepository, MessageRepository>()
                 .Configure<Interception>()
                 .SetInterceptorFor<IMessageRepository>(new InterfaceInterceptor());
+        }
 
-            //Service
+        private static void RegisterServiceConfig(IUnityContainer container)
+        {
             container.RegisterType<IMessageBoardService, MessageBoardService>();
         }
+        #endregion
     }
 }

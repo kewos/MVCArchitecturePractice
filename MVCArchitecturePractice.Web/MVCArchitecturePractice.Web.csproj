@@ -62,13 +62,22 @@
       <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
     <Reference Include="MVCArchitecturePractice.Core">
-      <HintPath>..\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
+      <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MVCArchitecturePractice.Core.Contrast">
+      <HintPath>..\MVCArchitecturePractice.Core.Contrast\bin\Debug\MVCArchitecturePractice.Core.Contrast.dll</HintPath>
     </Reference>
     <Reference Include="MVCArchitecturePractice.Data">
-      <HintPath>..\MVCArchitecturePracticeData\bin\Debug\MVCArchitecturePractice.Data.dll</HintPath>
+      <HintPath>..\MVCArchitecturePractice.Data\bin\Debug\MVCArchitecturePractice.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MVCArchitecturePractice.Data.Contrast">
+      <HintPath>..\MVCArchitecturePractice.Data.Contrast\bin\Debug\MVCArchitecturePractice.Data.Contrast.dll</HintPath>
     </Reference>
     <Reference Include="MVCArchitecturePractice.Service">
       <HintPath>..\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="MVCArchitecturePractice.Service.Contrast">
+      <HintPath>..\MVCArchitecturePractice.Service.Contrast\bin\Debug\MVCArchitecturePractice.Service.Contrast.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

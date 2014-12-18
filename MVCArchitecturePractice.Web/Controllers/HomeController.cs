@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCArchitecturePractice.Core.Entities;
-using MVCArchitecturePractice.Service;
+using MVCArchitecturePractice.Service.Contrast;
 
 namespace MVCArchitecturePractice.Web.Controllers
 {

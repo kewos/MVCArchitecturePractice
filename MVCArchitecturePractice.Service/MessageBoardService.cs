@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Data.Contrast.Repositories;
+using MVCArchitecturePractice.Service.Contrast;
 
 namespace MVCArchitecturePractice.Service
 {

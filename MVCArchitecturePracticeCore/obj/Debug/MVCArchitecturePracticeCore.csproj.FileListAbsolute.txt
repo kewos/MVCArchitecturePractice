@@ -1,1 +1,0 @@
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePracticeCore\MVCArchitecturePracticeCore\bin\Debug\MVCArchitecturePracticeCore.exe.config

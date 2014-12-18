@@ -64,23 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aops\CatchExceptionHandler.cs" />
-    <Compile Include="Aops\LoggerHandler.cs" />
-    <Compile Include="Attributes\CatchExceptionAttribute.cs" />
-    <Compile Include="Attributes\LoggerAttribute.cs" />
-    <Compile Include="Exceptions\Exceptions.cs" />
-    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Exception\Exceptions.cs" />
+    <Compile Include="Extension\LinqExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Logger\ILogger.cs" />
-    <Compile Include="Utils\Logger\ILoggerFactory.cs" />
-    <Compile Include="Utils\Logger\Logger.cs" />
-    <Compile Include="Utils\Logger\LoggerFactory.cs" />
-    <Compile Include="Utils\Logger\LoggerFactoryManager.cs" />
-    <Compile Include="Utils\Util.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,6 +11,10 @@ namespace MVCArchitecturePractice.Data.Context
 {
     public class MyDbContext : DbContext, IDbContext
     {
+        /// <summary>
+        /// 透過反射取得全部Mapping
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             var mappings = Assembly.GetExecutingAssembly().GetInheritedTypes(typeof(EntityTypeConfiguration<>));

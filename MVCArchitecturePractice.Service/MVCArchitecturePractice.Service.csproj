@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7CF1685A-2310-4BA0-B9E7-6CAADF4F183C}</ProjectGuid>
+    <ProjectGuid>{D551BF24-EB69-4E24-8F6B-14C642CF9FFA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MVCArchitecturePractice.Service</RootNamespace>

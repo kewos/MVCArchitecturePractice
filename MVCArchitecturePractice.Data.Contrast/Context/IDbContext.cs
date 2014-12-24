@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using MVCArchitecturePractice.Core;
+using System.Data.Entity.Infrastructure;
 
 namespace MVCArchitecturePractice.Data.Contrast.Context
 {
@@ -17,5 +18,7 @@ namespace MVCArchitecturePractice.Data.Contrast.Context
         /// DBContext本身就有實作此方法
         /// </summary>
         int SaveChanges();
+
+        DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
     }
 }

@@ -23,10 +23,11 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
         // GET api/messageboard
         public HttpResponseMessage Get()
         {
-            var result = Mapper.Map<List<MessageModel>>(service.GetMessages().ToList());
+            var result = Mapper.Map<List<MessageModel>>(service.GetMessages());
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        // Read
         // GET api/messageboard/5
         public HttpResponseMessage Get(int id)
         {
@@ -34,21 +35,28 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        // POST api/messageboard
-        public HttpResponseMessage Post([FromBody]string value)
+        //Create
+        public HttpResponseMessage Post([FromBody]MessageModel model)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, value);
-        }
-
-        // PUT api/messageboard/5
-        public HttpResponseMessage Put(int id, [FromBody]string value)
-        {
+            Message result = Mapper.Map<Message>(model);
+            service.InsertMessage(result);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
+        // Update
+        // PUT api/messageboard/5
+        public HttpResponseMessage Put([FromBody]MessageModel model)
+        {
+            Message result = Mapper.Map<Message>(model);
+            service.UpdateMessage(result);
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
+        // Delete
         // DELETE api/messageboard/5
         public HttpResponseMessage Delete(int id)
         {
+            service.DeleteMessage(id);
             return Request.CreateResponse(HttpStatusCode.OK);
         }
     }

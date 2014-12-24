@@ -10,7 +10,7 @@ namespace MVCArchitecturePractice.Service.Contrast
         Message GetMessage(long id);
         void InsertMessage(Message message);
         void UpdateMessage(Message message);
-        void DeleteMessage(Message message);
+        void DeleteMessage(long id);
         IEnumerable<Message> GetMessages();
     }
 }

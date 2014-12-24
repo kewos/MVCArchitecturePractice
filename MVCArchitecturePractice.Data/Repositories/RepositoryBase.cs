@@ -52,8 +52,22 @@ namespace MVCArchitecturePractice.Data.Repositories
         {
             using (var context = new TContext())
             {
-                context.Set<TEntity>().Attach(entity);
+                context.Entry(entity).State = EntityState.Modified;
                 context.SaveChanges();
+            }
+        }
+
+        public void DeleteById(long id)
+        {
+            using (var context = new TContext())
+            {
+                var target = context.Set<TEntity>().Where(n => n.ID == id).FirstOrDefault();
+
+                if (target != null as TEntity)
+                {
+                    context.Set<TEntity>().Remove(target);
+                    context.SaveChanges();
+                }
             }
         }
 

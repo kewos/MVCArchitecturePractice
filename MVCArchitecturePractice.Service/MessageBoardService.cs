@@ -20,7 +20,7 @@ namespace MVCArchitecturePractice.Service
 
         public IEnumerable<Message> GetMessages()
         {
-            return messageRepository.GetAll();
+            return messageRepository.GetAll().AsEnumerable();
         }
 
         public Message GetMessage(long id)
@@ -30,17 +30,25 @@ namespace MVCArchitecturePractice.Service
 
         public void InsertMessage(Message message)
         {
+            message.AddDate = DateTime.Now;
             messageRepository.Insert(message);
         }
 
         public void UpdateMessage(Message message)
         {
-            messageRepository.Update(message);
+            var target = GetMessage(message.ID);
+            if (target != null as Message)
+            {
+                target.Comment = message.Comment;
+                target.UserId = message.UserId;
+                target.ModifyDate = DateTime.Now;
+                messageRepository.Update(target);
+            }
         }
 
-        public void DeleteMessage(Message message)
+        public void DeleteMessage(long id)
         {
-            messageRepository.Delete(message);
+            messageRepository.DeleteById(id);
         }
     }
 }

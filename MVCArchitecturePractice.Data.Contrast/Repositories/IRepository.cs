@@ -45,5 +45,12 @@ namespace MVCArchitecturePractice.Data.Contrast.Repositories
         [Logger]
         [CatchException]
         void Delete(TEntity entity);
+
+        /// <summary>
+        /// Delete 透過 Id
+        /// </summary>
+        [Logger]
+        [CatchException]
+        void DeleteById(long id);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Data.Entity;
 using MVCArchitecturePractice.Data.Contrast.Repositories;
 using MVCArchitecturePractice.Data.Contrast.Context;
@@ -18,6 +19,16 @@ namespace MVCArchitecturePractice.Data.Repositories
         where TEntity : BaseEntity
         where TContext : IDbContext, new()
     {
+        public TEntity GetFirstOrDefault(Expression<Func<TEntity, bool>> expression)
+        {
+            return Find(expression).FirstOrDefault();
+        }
+
+        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> expression)
+        {
+            return GetAll().AsQueryable().Where(expression);
+        }
+
         #region IRepository<TEntity> Member
  
         public TEntity GetById(long id)
@@ -41,6 +52,7 @@ namespace MVCArchitecturePractice.Data.Repositories
         {
             using (var context = new TContext())
             {
+                context.Set<TEntity>().Attach(entity);
                 context.SaveChanges();
             }
         }
@@ -58,7 +70,7 @@ namespace MVCArchitecturePractice.Data.Repositories
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>();
+                return context.Set<TEntity>().ToList();
             }
         }
         #endregion

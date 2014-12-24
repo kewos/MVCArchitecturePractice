@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post" action="/Public/Login">
+    <input type="hidden" name="ReturnURL"
+           value="@System.Web.HttpContext.Current.Request["ReturnURL"]" />
+    <input type="text" name="Username" value="" />
+    <select name="Role">
+        <option value="Public">Public</option>
+        <option value="Registered">Registered</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <input type="submit" name="Login" value="Login" />
+</form>

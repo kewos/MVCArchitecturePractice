@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCArchitecturePractice.Business
+namespace MVCArchitecturePractice.Service.Contrast.Contrast
 {
-    /// <summary>
-    /// 給Service用的邏輯
-    /// </summary>
-    public class Class1
+    public interface IService
     {
     }
 }

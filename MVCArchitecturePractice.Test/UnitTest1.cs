@@ -3,11 +3,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MVCArchitecturePractice.Test
 {
+    public class 
+
     [TestClass]
-    public class UnitTest1
+    public class ServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ServiceTest()
         {
         }
     }

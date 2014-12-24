@@ -77,7 +77,6 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microso
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Owin.Security.Twitter.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Microsoft.Web.Infrastructure.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\MVCArchitecturePractice.Core.dll
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\MVCArchitecturePractice.Data.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Newtonsoft.Json.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\Owin.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Web\bin\System.Web.Helpers.dll

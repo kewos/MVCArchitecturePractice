@@ -17,22 +17,22 @@ namespace MVCArchitecturePractice.Data
         {
             IUnityContainer container = new UnityContainer();
             container.AddNewExtension<Interception>();
-            container
-                .RegisterType<IUserRepository, UserRepository>()
-                .Configure<Interception>()
-                .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
-
-            var userRepository = container.Resolve<IUserRepository>();
-            var user = new User { Email = "abc", Name = "abc", Password = "abc", Address = "abc" };
-            userRepository.Insert(user);
-
             //container
-            //    .RegisterType<IMessageRepository, MessageRepository>()
+            //    .RegisterType<IUserRepository, UserRepository>()
             //    .Configure<Interception>()
-            //    .SetInterceptorFor<IMessageRepository>(new InterfaceInterceptor());
+            //    .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
 
-            //var message = container.Resolve<IMessageRepository>();
-            //message.Insert(new Message { Comment = "asdfasdfasdf", UserId = 1 });
+            //var userRepository = container.Resolve<IUserRepository>();
+            //var user = new User { Email = "abc", Name = "abc", Password = "abc", Address = "abc" };
+            //userRepository.Insert(user);
+
+            container
+                .RegisterType<IMessageRepository, MessageRepository>()
+                .Configure<Interception>()
+                .SetInterceptorFor<IMessageRepository>(new InterfaceInterceptor());
+
+            var message = container.Resolve<IMessageRepository>();
+            message.Insert(new Message { Comment = "asdfasdfasdf", UserId = 1 });
         }
     }
 }

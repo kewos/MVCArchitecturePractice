@@ -63,7 +63,9 @@ namespace MVCArchitecturePractice.Host.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
+            //Resolve Unity Container
             config.DependencyResolver = new UnityResolver(Bootstrapper.Initial());
+
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();

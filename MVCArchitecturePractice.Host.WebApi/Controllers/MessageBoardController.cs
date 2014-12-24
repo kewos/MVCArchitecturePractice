@@ -7,6 +7,7 @@ using System.Web.Http;
 using MVCArchitecturePractice.Service.Contrast;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Host.WebApi.Models;
+using AutoMapper;
 
 namespace MVCArchitecturePractice.Host.WebApi.Controllers
 {
@@ -19,35 +20,18 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             this.service = service;
         }
 
-
         // GET api/messageboard
         public HttpResponseMessage Get()
         {
-            var result = service.GetMessages().Select(n =>
-                new MessageModel
-                {
-                    ID = n.ID,
-                    UserId = n.UserId,
-                    Comment = n.Comment,
-                    AddDate = n.AddDate,
-                    ModifyDate = n.ModifyDate,
-                });
+            var result = Mapper.Map<List<MessageModel>>(service.GetMessages().ToList());
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
         // GET api/messageboard/5
         public HttpResponseMessage Get(int id)
         {
-            var result = service.GetMessage(id);
-            var obj = new MessageModel
-                {
-                    ID = result.ID,
-                    UserId = result.UserId,
-                    Comment = result.Comment,
-                    AddDate = result.AddDate,
-                    ModifyDate = result.ModifyDate,
-                };
-            return Request.CreateResponse(HttpStatusCode.OK, obj);
+            var result = Mapper.Map<MessageModel>(service.GetMessage(id));
+            return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
         // POST api/messageboard

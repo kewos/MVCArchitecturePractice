@@ -48,3 +48,8 @@ C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePr
 C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\obj\Debug\MVCArchitecturePractice.Service.csprojResolveAssemblyReference.cache
 C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\obj\Debug\MVCArchitecturePractice.Service.dll
 C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\obj\Debug\MVCArchitecturePractice.Service.pdb
+C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.Net4.dll
+C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.dll
+C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Dto.dll
+C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.xml
+C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Dto.pdb

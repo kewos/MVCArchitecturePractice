@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="MVCArchitecturePractice.Core">
       <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
     </Reference>
@@ -42,6 +48,9 @@
     <Reference Include="MVCArchitecturePractice.Service.Contrast">
       <HintPath>..\MVCArchitecturePractice.Service.Contrast\bin\Debug\MVCArchitecturePractice.Service.Contrast.dll</HintPath>
     </Reference>
+    <Reference Include="MVCArchitecturePractice.Service.Dto">
+      <HintPath>..\MVCArchitecturePractice.Service.Dto\bin\Debug\MVCArchitecturePractice.Service.Dto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,10 +60,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMap\AutoMapperConfigcs.cs" />
+    <Compile Include="AutoMap\MessageEntityToMessageModel.cs" />
+    <Compile Include="AutoMap\UserEntityToUserModel.cs" />
     <Compile Include="MessageBoardService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

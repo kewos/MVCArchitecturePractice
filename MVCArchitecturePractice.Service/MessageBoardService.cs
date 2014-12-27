@@ -4,6 +4,8 @@ using System.Linq;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Data.Contrast.Repositories;
 using MVCArchitecturePractice.Service.Contrast;
+using MVCArchitecturePractice.Service.Dto;
+using AutoMapper;
 
 namespace MVCArchitecturePractice.Service
 {
@@ -18,32 +20,29 @@ namespace MVCArchitecturePractice.Service
             this.messageRepository = messageRepository;
         }
 
-        public IEnumerable<Message> GetMessages()
+        public IEnumerable<MessageDto> GetMessages()
         {
-            return messageRepository.GetAll().AsEnumerable();
+            var result = messageRepository.GetAll();
+            return Mapper.Map<IEnumerable<MessageDto>>(result);
         }
 
-        public Message GetMessage(long id)
+        public MessageDto GetMessage(long id)
         {
-            return messageRepository.GetById(id);
+            return Mapper.Map<MessageDto>(messageRepository.GetById(id));
         }
 
-        public void InsertMessage(Message message)
+        public void InsertMessage(MessageDto messageDto)
         {
-            message.AddDate = DateTime.Now;
-            messageRepository.Insert(message);
+            messageDto.AddDate = DateTime.Now;
+            messageRepository.Insert(Mapper.Map<Message>(messageDto));
         }
 
-        public void UpdateMessage(Message message)
+        public void UpdateMessage(MessageDto messageDto)
         {
-            var target = GetMessage(message.ID);
-            if (target != null as Message)
-            {
-                target.Comment = message.Comment;
-                target.UserId = message.UserId;
-                target.ModifyDate = DateTime.Now;
-                messageRepository.Update(target);
-            }
+            messageDto.ModifyDate = DateTime.Now;
+            var destination = messageRepository.GetById(messageDto.ID);
+            var RESULT = Mapper.Map(messageDto, destination);
+            messageRepository.Update(Mapper.Map(messageDto, destination));
         }
 
         public void DeleteMessage(long id)

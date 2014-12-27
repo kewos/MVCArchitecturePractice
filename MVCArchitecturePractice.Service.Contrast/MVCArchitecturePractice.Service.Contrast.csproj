@@ -36,6 +36,9 @@
     <Reference Include="MVCArchitecturePractice.Core.Contrast">
       <HintPath>..\MVCArchitecturePractice.Core.Contrast\bin\Debug\MVCArchitecturePractice.Core.Contrast.dll</HintPath>
     </Reference>
+    <Reference Include="MVCArchitecturePractice.Service.Dto">
+      <HintPath>..\MVCArchitecturePractice.Service.Dto\bin\Debug\MVCArchitecturePractice.Service.Dto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

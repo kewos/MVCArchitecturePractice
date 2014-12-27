@@ -86,6 +86,9 @@
     <Reference Include="MVCArchitecturePractice.Service.Contrast">
       <HintPath>..\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Contrast.dll</HintPath>
     </Reference>
+    <Reference Include="MVCArchitecturePractice.Service.Dto">
+      <HintPath>..\MVCArchitecturePractice.Service.Dto\bin\Debug\MVCArchitecturePractice.Service.Dto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />

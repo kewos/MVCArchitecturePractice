@@ -7,10 +7,12 @@ using System.Web.Http;
 using MVCArchitecturePractice.Service.Contrast;
 using MVCArchitecturePractice.Core.Entities;
 using MVCArchitecturePractice.Host.WebApi.Models;
+using MVCArchitecturePractice.Service.Dto;
 using AutoMapper;
 
 namespace MVCArchitecturePractice.Host.WebApi.Controllers
 {
+    [RoutePrefix("api/MessageBoard")]
     public class MessageBoardController : ApiController
     {
         private IMessageBoardService service;
@@ -20,44 +22,94 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             this.service = service;
         }
 
-        // GET api/messageboard
-        public HttpResponseMessage Get()
+        [Route("Get_Messages")]
+        [HttpGet]
+        public HttpResponseMessage Get_Messages()
         {
-            var result = Mapper.Map<List<MessageModel>>(service.GetMessages());
-            return Request.CreateResponse(HttpStatusCode.OK, result);
+            HttpResponseMessage result;
+            try
+            {
+                var data = service.GetMessages();
+                result = Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception e)
+            {
+                result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, e.Message);
+            }
+
+            return result;
         }
 
-        // Read
-        // GET api/messageboard/5
-        public HttpResponseMessage Get(int id)
+        [Route("Get_MessageById")]
+        [HttpGet]
+        public HttpResponseMessage Get_MessageById(int id)
         {
-            var result = Mapper.Map<MessageModel>(service.GetMessage(id));
-            return Request.CreateResponse(HttpStatusCode.OK, result);
+            HttpResponseMessage result;
+            try
+            {
+                var data = service.GetMessage(id);
+                result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, data);
+            }
+            catch (Exception e)
+            {
+                result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, e.Message);
+            }
+
+            return result;
         }
 
-        //Create
-        public HttpResponseMessage Post([FromBody]MessageModel model)
+        [Route("Post_Message")]
+        [HttpPost]
+        public HttpResponseMessage Post_Message([FromBody]MessageDto messageDto)
         {
-            Message result = Mapper.Map<Message>(model);
-            service.InsertMessage(result);
-            return Request.CreateResponse(HttpStatusCode.OK);
+            HttpResponseMessage result;
+            try
+            {
+                service.InsertMessage(messageDto);
+                result = Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception e)
+            {
+                result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, e.Message);
+            }
+
+            return result;
         }
 
-        // Update
-        // PUT api/messageboard/5
-        public HttpResponseMessage Put([FromBody]MessageModel model)
+        [Route("Put_Message")]
+        [HttpPut]
+        public HttpResponseMessage Put_Message([FromBody]MessageDto messageDto)
         {
-            Message result = Mapper.Map<Message>(model);
-            service.UpdateMessage(result);
-            return Request.CreateResponse(HttpStatusCode.OK);
+            HttpResponseMessage result;
+            try
+            {
+                service.UpdateMessage(messageDto);
+                result = Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception e)
+            {
+                result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, e.Message);
+            }
+
+            return result;
         }
 
-        // Delete
-        // DELETE api/messageboard/5
-        public HttpResponseMessage Delete(int id)
+        [Route("Delete_Message")]
+        [HttpDelete]
+        public HttpResponseMessage Delete_Message(int id)
         {
-            service.DeleteMessage(id);
-            return Request.CreateResponse(HttpStatusCode.OK);
+            HttpResponseMessage result;
+            try
+            {
+                service.DeleteMessage(id);
+                result = Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception e)
+            {
+                result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, e.Message);
+            }
+
+            return result;
         }
     }
 }

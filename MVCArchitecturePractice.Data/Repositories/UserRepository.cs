@@ -5,7 +5,7 @@ using MVCArchitecturePractice.Core.Entities;
 
 namespace MVCArchitecturePractice.Data.Repositories
 {
-    public class UserRepository : RepositoryBase<User>, IUserRepository
+    public class UserRepository : RepositoryBase<User>, IUserRepository 
     {
     }
 }

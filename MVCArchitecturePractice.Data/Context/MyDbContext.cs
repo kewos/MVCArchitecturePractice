@@ -26,7 +26,7 @@ namespace MVCArchitecturePractice.Data.Context
 
             base.OnModelCreating(modelBuilder);
         }
-       
+
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
         {
             return base.Set<TEntity>();

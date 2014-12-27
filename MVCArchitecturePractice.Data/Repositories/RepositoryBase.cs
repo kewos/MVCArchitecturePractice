@@ -30,7 +30,7 @@ namespace MVCArchitecturePractice.Data.Repositories
         }
 
         #region IRepository<TEntity> Member
- 
+
         public TEntity GetById(long id)
         {
             using (var context = new TContext())
@@ -62,7 +62,6 @@ namespace MVCArchitecturePractice.Data.Repositories
             using (var context = new TContext())
             {
                 var target = context.Set<TEntity>().Where(n => n.ID == id).FirstOrDefault();
-
                 if (target != null as TEntity)
                 {
                     context.Set<TEntity>().Remove(target);

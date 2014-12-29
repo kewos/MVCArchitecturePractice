@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Exception\Exceptions.cs" />
     <Compile Include="Extension\LinqExtensions.cs" />
+    <Compile Include="Extension\UnityExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

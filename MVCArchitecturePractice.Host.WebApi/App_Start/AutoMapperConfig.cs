@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AutoMapper;
-using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Host.WebApi.Models;
 
 namespace MVCArchitecturePractice.Host.WebApi.App_Start

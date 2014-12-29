@@ -44,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IIdentifyEntity.cs" />
-    <Compile Include="Contracts\IWithDayEntity.cs" />
+    <Compile Include="Contract\IBusiness.cs" />
+    <Compile Include="Contract\IIdentifyEntity.cs" />
+    <Compile Include="Contract\IRepository.cs" />
+    <Compile Include="Contract\IService.cs" />
+    <Compile Include="Contract\IWithDayEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

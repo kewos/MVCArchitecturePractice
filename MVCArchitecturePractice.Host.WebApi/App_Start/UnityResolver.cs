@@ -7,6 +7,7 @@ using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using Microsoft.Practices.Unity.Mvc;
 using Microsoft.Practices.Unity;
+using System.Web.Http.Dependencies;
 
 namespace MVCArchitecturePractice.Host.WebApi
 {
@@ -47,7 +48,7 @@ namespace MVCArchitecturePractice.Host.WebApi
             }
         }
 
-        public System.Web.Http.Dependencies.IDependencyScope BeginScope()
+        public IDependencyScope BeginScope()
         {
             var child = container.CreateChildContainer();
             return new UnityResolver(child);

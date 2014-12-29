@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
-using MVCArchitecturePractice.Data.Contrast.Repositories;
+using MVCArchitecturePractice.Data.Contrast.Repository;
 using MVCArchitecturePractice.Data.Repositories;
-using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Core.Entity;
 
 namespace MVCArchitecturePractice.Data
 {

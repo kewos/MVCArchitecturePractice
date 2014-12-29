@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Data.Context;
 using MVCArchitecturePractice.Data.Contrast;
 

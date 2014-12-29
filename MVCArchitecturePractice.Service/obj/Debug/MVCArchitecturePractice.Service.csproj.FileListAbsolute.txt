@@ -53,3 +53,14 @@ C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePr
 C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Dto.dll
 C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.xml
 C:\Users\kewos\Desktop\新增資料夾\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Dto.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.Net4.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Dto.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\AutoMapper.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Dto.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Business.Contrast.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Business.Contrast.pdb
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml

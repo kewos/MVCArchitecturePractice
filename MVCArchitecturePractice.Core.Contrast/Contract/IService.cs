@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCArchitecturePractice.Service.Contrast.Contrast
+namespace MVCArchitecturePractice.Core.Contrast
 {
     public interface IService
     {

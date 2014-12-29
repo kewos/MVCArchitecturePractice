@@ -4,8 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using MVCArchitecturePractice.Core.Contrast;
 using MVCArchitecturePractice.Service.Contrast;
-using MVCArchitecturePractice.Core.Entities;
+using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Host.WebApi.Models;
 using MVCArchitecturePractice.Service.Dto;
 using AutoMapper;
@@ -17,9 +18,9 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
     {
         private IMessageBoardService service;
 
-        public MessageBoardController(IMessageBoardService service)
+        public MessageBoardController(IServiceFactory serviceFactory)
         {
-            this.service = service;
+            this.service = serviceFactory.GetService<IMessageBoardService>();
         }
 
         [Route("Get_Messages")]

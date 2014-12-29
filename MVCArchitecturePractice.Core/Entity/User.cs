@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MVCArchitecturePractice.Core.Entities
+namespace MVCArchitecturePractice.Core.Entity
 {
     public class User : BaseEntity
     {

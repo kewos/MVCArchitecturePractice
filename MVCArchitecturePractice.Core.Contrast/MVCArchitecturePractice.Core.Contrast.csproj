@@ -45,9 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contract\IBusiness.cs" />
+    <Compile Include="Contract\IBusinessFactory.cs" />
     <Compile Include="Contract\IIdentifyEntity.cs" />
     <Compile Include="Contract\IRepository.cs" />
+    <Compile Include="Contract\IRepositoryFactory.cs" />
     <Compile Include="Contract\IService.cs" />
+    <Compile Include="Contract\IServiceFactory.cs" />
     <Compile Include="Contract\IWithDayEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

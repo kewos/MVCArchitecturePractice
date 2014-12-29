@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Data.Entity;
-using MVCArchitecturePractice.Core;
 using System.Data.Entity.Infrastructure;
+using MVCArchitecturePractice.Core;
+using MVCArchitecturePractice.Core.Contrast;
 
 namespace MVCArchitecturePractice.Data.Contrast.Context
 {
-    public interface IDbContext : IDisposable
+    public interface IDbContext : ISql
     {
         IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity;
         int SaveChanges();

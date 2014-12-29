@@ -5,7 +5,6 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Deb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Core.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Data.Contrast.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Contrast.dll
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\EntityFramework.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Common.Attribute.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.dll
@@ -15,7 +14,6 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Deb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Core.Contrast.pdb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Data.Contrast.pdb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Contrast.pdb
-D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\EntityFramework.xml
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Common.Attribute.pdb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.xml
@@ -64,3 +62,5 @@ D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Deb
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\EntityFramework.dll
+D:\code\Practice\MVCArchitecturePractice\MVCArchitecturePractice.Service\bin\Debug\EntityFramework.xml

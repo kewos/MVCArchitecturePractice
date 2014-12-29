@@ -9,7 +9,7 @@ using Microsoft.Practices.Unity.InterceptionExtension;
 using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Core.Contrast;
 using MVCArchitecturePractice.Data;
-using MVCArchitecturePractice.Data.Repositories;
+using MVCArchitecturePractice.Data.Repository;
 using MVCArchitecturePractice.Data.Contrast.Repository;
 using MVCArchitecturePractice.Data.Contrast.Context;
 using MVCArchitecturePractice.Data.Context;

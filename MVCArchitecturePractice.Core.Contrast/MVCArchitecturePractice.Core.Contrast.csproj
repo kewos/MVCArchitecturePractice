@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,14 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contract\IBusiness.cs" />
-    <Compile Include="Contract\IBusinessFactory.cs" />
-    <Compile Include="Contract\IIdentifyEntity.cs" />
-    <Compile Include="Contract\IRepository.cs" />
-    <Compile Include="Contract\IRepositoryFactory.cs" />
-    <Compile Include="Contract\IService.cs" />
-    <Compile Include="Contract\IServiceFactory.cs" />
-    <Compile Include="Contract\IWithDayEntity.cs" />
+    <Compile Include="Contrast\IBusiness.cs" />
+    <Compile Include="Contrast\IBusinessFactory.cs" />
+    <Compile Include="Contrast\IIdentifyEntity.cs" />
+    <Compile Include="Contrast\ISql.cs" />
+    <Compile Include="Contrast\IRepository.cs" />
+    <Compile Include="Contrast\IRepositoryFactory.cs" />
+    <Compile Include="Contrast\IService.cs" />
+    <Compile Include="Contrast\IServiceFactory.cs" />
+    <Compile Include="Contrast\IWithDayEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

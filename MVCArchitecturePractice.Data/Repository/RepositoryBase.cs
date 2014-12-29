@@ -8,7 +8,7 @@ using MVCArchitecturePractice.Data.Contrast.Context;
 using MVCArchitecturePractice.Core;
 using MVCArchitecturePractice.Data.Context;
 
-namespace MVCArchitecturePractice.Data.Repositories
+namespace MVCArchitecturePractice.Data.Repository
 {
     /// <summary>
     /// 透過Repository操作TContext

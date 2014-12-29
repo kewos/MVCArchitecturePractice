@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.Practices.Unity.Mvc;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
+using MVCArchitecturePractice.Common.Extension;
 using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Core.Contrast;
 using MVCArchitecturePractice.Data;
@@ -65,13 +66,8 @@ namespace MVCArchitecturePractice.Host.WebApi
         private static void RegisterRepositoryConfig(IUnityContainer container)
         {
             container.RegisterType<IRepositoryFactory, RepositoryFactory>(new InjectionConstructor(container));
-            container.RegisterType<IUserRepository, UserRepository>()
-               .Configure<Interception>()
-               .SetInterceptorFor<IUserRepository>(new InterfaceInterceptor());
-
-            container.RegisterType<IMessageRepository, MessageRepository>()
-                .Configure<Interception>()
-                .SetInterceptorFor<IMessageRepository>(new InterfaceInterceptor());
+            container.RegistTypeAndSetInteceptor<IUserRepository, UserRepository>();
+            container.RegistTypeAndSetInteceptor<IMessageRepository, MessageRepository>();
         }
 
         /// <summary>

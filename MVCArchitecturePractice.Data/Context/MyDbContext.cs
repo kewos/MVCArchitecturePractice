@@ -9,6 +9,9 @@ using MVCArchitecturePractice.Data.Contrast.Context;
 
 namespace MVCArchitecturePractice.Data.Context
 {
+    /// <summary>
+    /// EntityFramework DBContext
+    /// </summary>
     public class MyDbContext : DbContext, IDbContext
     {
         /// <summary>

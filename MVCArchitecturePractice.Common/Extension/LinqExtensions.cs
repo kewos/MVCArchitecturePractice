@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCArchitecturePractice.Common.Extendsions
+namespace MVCArchitecturePractice.Common.Extendsion
 {
     public static class LinqExtensions
     {

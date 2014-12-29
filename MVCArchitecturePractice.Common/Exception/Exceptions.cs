@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCArchitecturePractice.Common.Exceptions
+namespace MVCArchitecturePractice.Common.Exception
 {
     /// <summary>
     /// 放一些例外

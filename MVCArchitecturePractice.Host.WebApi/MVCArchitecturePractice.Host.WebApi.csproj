@@ -74,6 +74,9 @@
     <Reference Include="MVCArchitecturePractice.Business.Contrast">
       <HintPath>..\MVCArchitecturePractice.Business.Contrast\bin\Debug\MVCArchitecturePractice.Business.Contrast.dll</HintPath>
     </Reference>
+    <Reference Include="MVCArchitecturePractice.Common">
+      <HintPath>..\MVCArchitecturePractice.Common\bin\Debug\MVCArchitecturePractice.Common.dll</HintPath>
+    </Reference>
     <Reference Include="MVCArchitecturePractice.Core">
       <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
     </Reference>

@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 namespace MVCArchitecturePractice.Core.Contrast
 {
     /// <summary>
-    /// 商業邏輯工廠
+    /// Business Logic工廠
     /// </summary>
     public interface IBusinessFactory
     {
-        TBusiness GetBusiness<TBusiness>() 
-            where TBusiness : IBusiness;
+        /// <summary>
+        /// 取得Business Logic
+        /// </summary>
+        /// <typeparam name="TBusiness"></typeparam>
+        /// <returns></returns>
+        TBusiness GetBusiness<TBusiness>() where TBusiness : IBusiness;
     }
 }

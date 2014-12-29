@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Core.Contrast
 {
+    /// <summary>
+    /// Repository工廠
+    /// </summary>
     public interface IRepositoryFactory
     {
         /// <summary>

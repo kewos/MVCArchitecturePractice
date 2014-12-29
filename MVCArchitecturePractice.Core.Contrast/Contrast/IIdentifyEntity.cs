@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Core.Contrast
 {
+    /// <summary>
+    /// 有AutoIncreaseID 的Entity都繼承這個Interface 
+    /// </summary>
     public interface IIdentifyEntity
     {
-        /// <summary>
-        /// 流水號ID
-        /// </summary>
         Int64 ID { get; set; }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecturePractice.Core.Contrast
 {
+    /// <summary>
+    /// 有新增日期修改日期的Entity都繼承這個Interface
+    /// </summary>
     public interface IWithDayEntity
     {
         /// <summary>

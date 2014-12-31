@@ -88,6 +88,7 @@ namespace MVCArchitecturePractice.Host.WebApi
         {
             container.RegisterType<IServiceFactory, ServiceFactory>(new InjectionConstructor(container));
             container.RegisterType<IMessageBoardService, MessageBoardService>();
+            container.RegisterType<IMessageBoardService, MessageBoardService>();
         }
         #endregion
     }

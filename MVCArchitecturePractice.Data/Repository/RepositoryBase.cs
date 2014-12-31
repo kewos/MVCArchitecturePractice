@@ -10,6 +10,11 @@ using MVCArchitecturePractice.Data.Context;
 
 namespace MVCArchitecturePractice.Data.Repository
 {
+    public abstract class RepositoryBase<TEntity> : RepositoryBase<TEntity, MyDbContext>
+            where TEntity : BaseEntity
+    {
+    }
+
     /// <summary>
     /// 透過Repository操作TContext
     /// </summary>
@@ -19,19 +24,19 @@ namespace MVCArchitecturePractice.Data.Repository
         where TEntity : BaseEntity
         where TContext : IDbContext, new()
     {
-        public TEntity GetFirstOrDefault(Expression<Func<TEntity, bool>> expression)
+        public virtual TEntity GetFirstOrDefault(Expression<Func<TEntity, bool>> expression)
         {
             return Find(expression).FirstOrDefault();
         }
 
-        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> expression)
+        public virtual IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> expression)
         {
             return GetAll().AsQueryable().Where(expression);
         }
 
         #region IRepository<TEntity> Member
 
-        public TEntity GetById(long id)
+        public virtual TEntity GetById(long id)
         {
             using (var context = new TContext())
             {
@@ -39,7 +44,7 @@ namespace MVCArchitecturePractice.Data.Repository
             }
         }
 
-        public void Insert(TEntity entity)
+        public virtual void Insert(TEntity entity)
         {
             using (var context = new TContext())
             {
@@ -48,7 +53,7 @@ namespace MVCArchitecturePractice.Data.Repository
             }
         }
 
-        public void Update(TEntity entity)
+        public virtual void Update(TEntity entity)
         {
             using (var context = new TContext())
             {
@@ -57,7 +62,7 @@ namespace MVCArchitecturePractice.Data.Repository
             }
         }
 
-        public void DeleteById(long id)
+        public virtual void DeleteById(long id)
         {
             using (var context = new TContext())
             {
@@ -70,7 +75,7 @@ namespace MVCArchitecturePractice.Data.Repository
             }
         }
 
-        public void Delete(TEntity entity)
+        public virtual void Delete(TEntity entity)
         {
             using (var context = new TContext())
             {
@@ -79,7 +84,7 @@ namespace MVCArchitecturePractice.Data.Repository
             }
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             using (var context = new TContext())
             {
@@ -87,11 +92,5 @@ namespace MVCArchitecturePractice.Data.Repository
             }
         }
         #endregion
-    }
-
-    public abstract class RepositoryBase<TEntity> : RepositoryBase<TEntity, MyDbContext>
-        where TEntity : BaseEntity
-    {
-
     }
 }

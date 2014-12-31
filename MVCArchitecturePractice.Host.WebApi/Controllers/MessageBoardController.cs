@@ -9,28 +9,30 @@ using MVCArchitecturePractice.Service.Contrast;
 using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Host.WebApi.Models;
 using MVCArchitecturePractice.Service.Dto;
-using AutoMapper;
 
 namespace MVCArchitecturePractice.Host.WebApi.Controllers
 {
     [RoutePrefix("api/MessageBoard")]
     public class MessageBoardController : ApiController
     {
-        private IMessageBoardService service;
+        private IMessageBoardService messageBoardService;
+        private IAuthenticationService authenticationService;
 
         public MessageBoardController(IServiceFactory serviceFactory)
         {
-            this.service = serviceFactory.GetService<IMessageBoardService>();
+            this.messageBoardService = serviceFactory.GetService<IMessageBoardService>();
+            this.authenticationService = serviceFactory.GetService<IAuthenticationService>();
         }
 
         [Route("Get_Messages")]
         [HttpGet]
+        [Authorize]
         public HttpResponseMessage Get_Messages()
         {
             HttpResponseMessage result;
             try
             {
-                var data = service.GetMessages();
+                var data = messageBoardService.GetMessages();
                 result = Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception e)
@@ -48,7 +50,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             HttpResponseMessage result;
             try
             {
-                var data = service.GetMessage(id);
+                var data = messageBoardService.GetMessage(id);
                 result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, data);
             }
             catch (Exception e)
@@ -66,7 +68,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             HttpResponseMessage result;
             try
             {
-                service.InsertMessage(messageDto);
+                messageBoardService.InsertMessage(messageDto);
                 result = Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception e)
@@ -84,7 +86,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             HttpResponseMessage result;
             try
             {
-                service.UpdateMessage(messageDto);
+                messageBoardService.UpdateMessage(messageDto);
                 result = Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception e)
@@ -102,7 +104,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             HttpResponseMessage result;
             try
             {
-                service.DeleteMessage(id);
+                messageBoardService.DeleteMessage(id);
                 result = Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception e)

@@ -10,11 +10,6 @@ using MVCArchitecturePractice.Data.Context;
 
 namespace MVCArchitecturePractice.Data.Repository
 {
-    public abstract class RepositoryBase<TEntity> : RepositoryBase<TEntity, MyDbContext>
-            where TEntity : BaseEntity
-    {
-    }
-
     /// <summary>
     /// 透過Repository操作TContext
     /// </summary>

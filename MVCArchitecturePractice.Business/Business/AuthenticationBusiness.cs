@@ -3,25 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security;
-using System.Web.Security;
+using MVCArchitecturePractice.Common.DTO;
 using MVCArchitecturePractice.Core.Contrast;
 using MVCArchitecturePractice.Data.Contrast.Repository;
 using MVCArchitecturePractice.Business.Contrast;
-using MVCArchitecturePractice.Service.Dto;
 
-namespace MVCArchitecturePractice.Service.Service
+namespace MVCArchitecturePractice.Business
 {
-    public class AuthenticationService : IAuthenticationService
+    public class AuthenticationBusiness : IAuthenticationBusiness
     {
         private IUserRepository userRepository;
 
-        public AuthenticationService(IRepositoryFactory repositoryFactory, IBusinessFactory businessFactory)
+        public AuthenticationBusiness(IRepositoryFactory repositoryFactory)
         { 
             userRepository = repositoryFactory.GetRepository<IUserRepository>();
         }
 
-        public bool UserIsValid(UserDto dto)
+        public bool UserIsValid(UserDTO dto)
         {
             bool isValid = userRepository.GetAll().Any(user => user.Name == dto.Name && user.Password == dto.Password);
             if (isValid)

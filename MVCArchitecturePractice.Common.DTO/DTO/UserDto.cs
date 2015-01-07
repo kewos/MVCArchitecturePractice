@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCArchitecturePractice.Service.Dto
+namespace MVCArchitecturePractice.Common.DTO
 {
-    public class UserDto : BaseDto
+    public class UserDTO : BaseDTO
     {
         public string Name { get; set; }
         public string Password { get; set; }

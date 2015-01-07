@@ -16,8 +16,6 @@ using MVCArchitecturePractice.Data.Contrast.Context;
 using MVCArchitecturePractice.Data.Context;
 using MVCArchitecturePractice.Business;
 using MVCArchitecturePractice.Business.Contrast;
-using MVCArchitecturePractice.Service;
-using MVCArchitecturePractice.Service.Contrast;
 
 namespace MVCArchitecturePractice.Host.WebApi
 {
@@ -31,7 +29,6 @@ namespace MVCArchitecturePractice.Host.WebApi
                 {
                     RegisterRepositoryConfig,
                     RegisterBusinessConfig,
-                    RegisterServiceConfig
                 };
             }
         }
@@ -78,17 +75,7 @@ namespace MVCArchitecturePractice.Host.WebApi
         {
             container.RegisterType<IBusinessFactory, BusinessFactory>(new InjectionConstructor(container));
             container.RegisterType<IMessageBoardBusiness, MessageBoardBusiness>();
-        }
-
-        /// <summary>
-        /// 載入Sservice 設定
-        /// </summary>
-        /// <param name="container"></param>
-        private static void RegisterServiceConfig(IUnityContainer container)
-        {
-            container.RegisterType<IServiceFactory, ServiceFactory>(new InjectionConstructor(container));
-            container.RegisterType<IMessageBoardService, MessageBoardService>();
-            container.RegisterType<IMessageBoardService, MessageBoardService>();
+            container.RegisterType<IAuthenticationBusiness, AuthenticationBusiness>();
         }
         #endregion
     }

@@ -48,6 +48,13 @@
     <Reference Include="MVCArchitecturePractice.Common.Aop">
       <HintPath>..\MVCArchitecturePractice.Common.Aop\bin\Debug\MVCArchitecturePractice.Common.Aop.dll</HintPath>
     </Reference>
+    <Reference Include="MVCArchitecturePractice.Common.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MVCArchitecturePractice.Common.Utils\bin\Debug\MVCArchitecturePractice.Common.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MVCArchitecturePractice.Core">
+      <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attribute\CatchExceptionAttribute.cs" />
+    <Compile Include="Attribute\EntityModifyAttribute.cs" />
     <Compile Include="Attribute\LoggerAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

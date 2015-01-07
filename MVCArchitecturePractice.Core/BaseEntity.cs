@@ -15,7 +15,7 @@ namespace MVCArchitecturePractice.Core
 
         public BaseEntity()
         {
-            this.AddDate = DateTime.Now;
+            //this.AddDate = DateTime.Now;
         }
     }
 }

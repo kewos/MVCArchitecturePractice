@@ -77,6 +77,9 @@
     <Reference Include="MVCArchitecturePractice.Common">
       <HintPath>..\MVCArchitecturePractice.Common\bin\Debug\MVCArchitecturePractice.Common.dll</HintPath>
     </Reference>
+    <Reference Include="MVCArchitecturePractice.Common.DTO">
+      <HintPath>..\MVCArchitecturePractice.Common.DTO\bin\Debug\MVCArchitecturePractice.Common.DTO.dll</HintPath>
+    </Reference>
     <Reference Include="MVCArchitecturePractice.Core">
       <HintPath>..\MVCArchitecturePractice.Core\bin\Debug\MVCArchitecturePractice.Core.dll</HintPath>
     </Reference>
@@ -88,15 +91,6 @@
     </Reference>
     <Reference Include="MVCArchitecturePractice.Data.Contrast">
       <HintPath>..\MVCArchitecturePractice.Data\bin\Debug\MVCArchitecturePractice.Data.Contrast.dll</HintPath>
-    </Reference>
-    <Reference Include="MVCArchitecturePractice.Service">
-      <HintPath>..\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.dll</HintPath>
-    </Reference>
-    <Reference Include="MVCArchitecturePractice.Service.Contrast">
-      <HintPath>..\MVCArchitecturePractice.Service\bin\Debug\MVCArchitecturePractice.Service.Contrast.dll</HintPath>
-    </Reference>
-    <Reference Include="MVCArchitecturePractice.Service.Dto">
-      <HintPath>..\MVCArchitecturePractice.Service.Dto\bin\Debug\MVCArchitecturePractice.Service.Dto.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -245,7 +239,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Account2Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageBoardController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -295,7 +288,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

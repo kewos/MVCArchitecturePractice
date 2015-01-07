@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MVCArchitecturePractice.Service.Dto")]
+[assembly: AssemblyTitle("MVCArchitecturePractice.Common.DTO")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MVCArchitecturePractice.Service.Dto")]
+[assembly: AssemblyProduct("MVCArchitecturePractice.Common.DTO")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bbc141f2-6e25-495e-9289-2dce42eab4b4")]
+[assembly: Guid("0f2f077b-1710-4bd1-b439-9661c5043243")]
 
 // Version information for an assembly consists of the following four values:
 //

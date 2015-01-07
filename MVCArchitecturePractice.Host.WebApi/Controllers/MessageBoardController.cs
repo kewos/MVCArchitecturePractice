@@ -4,35 +4,76 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Security;
+using MVCArchitecturePractice.Common.DTO;
 using MVCArchitecturePractice.Core.Contrast;
-using MVCArchitecturePractice.Service.Contrast;
 using MVCArchitecturePractice.Core.Entity;
+using MVCArchitecturePractice.Business.Contrast;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Http;
+using System.Web.Http.ModelBinding;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.OAuth;
 using MVCArchitecturePractice.Host.WebApi.Models;
-using MVCArchitecturePractice.Service.Dto;
-
+using MVCArchitecturePractice.Host.WebApi.Providers;
+using MVCArchitecturePractice.Host.WebApi.Results;
 namespace MVCArchitecturePractice.Host.WebApi.Controllers
 {
     [RoutePrefix("api/MessageBoard")]
     public class MessageBoardController : ApiController
     {
-        private IMessageBoardService messageBoardService;
-        private IAuthenticationService authenticationService;
+        private IMessageBoardBusiness messageBoardBusiness;
+        private IAuthenticationBusiness authenticationBusiness;
 
-        public MessageBoardController(IServiceFactory serviceFactory)
+        public MessageBoardController(IBusinessFactory BusinessFactory)
         {
-            this.messageBoardService = serviceFactory.GetService<IMessageBoardService>();
-            this.authenticationService = serviceFactory.GetService<IAuthenticationService>();
+            this.messageBoardBusiness = BusinessFactory.GetBusiness<IMessageBoardBusiness>();
+            this.authenticationBusiness = BusinessFactory.GetBusiness<IAuthenticationBusiness>();
         }
+
+        [Route("Login")]
+        public HttpResponseMessage Login([FromBody]UserDTO userDto, bool isRemember = false)
+        {
+            var isValid = authenticationBusiness.UserIsValid(userDto);
+            if (isValid)
+            {
+                var claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.Name, userDto.Name));
+                ClaimsIdentity identity = new ClaimsIdentity(claims, OAuthDefaults.AuthenticationType);
+                Authentication.SignIn(identity);
+                var test = Authentication;
+                return Request.CreateResponse(HttpStatusCode.OK, "Success");
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, "false");
+        }
+
+        private IAuthenticationManager Authentication
+        {
+            get { return Request.GetOwinContext().Authentication; }
+        }
+
+        
 
         [Route("Get_Messages")]
         [HttpGet]
-        [Authorize]
         public HttpResponseMessage Get_Messages()
         {
             HttpResponseMessage result;
             try
             {
-                var data = messageBoardService.GetMessages();
+                var data = messageBoardBusiness.GetMessages();
                 result = Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception e)
@@ -50,7 +91,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             HttpResponseMessage result;
             try
             {
-                var data = messageBoardService.GetMessage(id);
+                var data = messageBoardBusiness.GetMessage(id);
                 result = Request.CreateResponse(HttpStatusCode.ExpectationFailed, data);
             }
             catch (Exception e)
@@ -63,12 +104,12 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
 
         [Route("Post_Message")]
         [HttpPost]
-        public HttpResponseMessage Post_Message([FromBody]MessageDto messageDto)
+        public HttpResponseMessage Post_Message([FromBody]MessageDTO messageDto)
         {
             HttpResponseMessage result;
             try
             {
-                messageBoardService.InsertMessage(messageDto);
+                messageBoardBusiness.InsertMessage(messageDto);
                 result = Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception e)
@@ -81,12 +122,12 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
 
         [Route("Put_Message")]
         [HttpPut]
-        public HttpResponseMessage Put_Message([FromBody]MessageDto messageDto)
+        public HttpResponseMessage Put_Message([FromBody]MessageDTO messageDTO)
         {
             HttpResponseMessage result;
             try
             {
-                messageBoardService.UpdateMessage(messageDto);
+                messageBoardBusiness.UpdateMessage(messageDTO);
                 result = Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception e)
@@ -104,7 +145,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
             HttpResponseMessage result;
             try
             {
-                messageBoardService.DeleteMessage(id);
+                messageBoardBusiness.DeleteMessage(id);
                 result = Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception e)

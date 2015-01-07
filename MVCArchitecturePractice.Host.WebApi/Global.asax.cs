@@ -6,7 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using MVCArchitecturePractice.Service.AutoMap;
+using MVCArchitecturePractice.Business.AutoMap;
 
 namespace MVCArchitecturePractice.Host.WebApi
 {

@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MVCArchitecturePractice.Common.DTO">
+      <HintPath>..\MVCArchitecturePractice.Common.DTO\bin\Debug\MVCArchitecturePractice.Common.DTO.dll</HintPath>
+    </Reference>
     <Reference Include="MVCArchitecturePractice.Core.Contrast">
       <HintPath>..\MVCArchitecturePractice.Core.Contrast\bin\Debug\MVCArchitecturePractice.Core.Contrast.dll</HintPath>
     </Reference>
@@ -42,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contrast\IAuthenticationBusiness.cs" />
     <Compile Include="Contrast\IMessageBoardBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

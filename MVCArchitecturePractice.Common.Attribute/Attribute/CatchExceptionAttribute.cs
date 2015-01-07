@@ -13,4 +13,15 @@ namespace MVCArchitecturePractice.Common.Attribute
             return new CatchExceptionHandler();
         }
     }
+
+    public class CatchExceptionHandler : ICallHandler
+    {
+        public int Order { get; set; }
+
+        public IMethodReturn Invoke(IMethodInvocation input, GetNextHandlerDelegate getNext)
+        {
+            IMethodReturn result = getNext()(input, getNext);
+            return result;
+        }
+    }
 }

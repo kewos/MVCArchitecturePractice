@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVCArchitecturePractice.Service.Dto
+namespace MVCArchitecturePractice.Common.DTO
 {
-    public abstract class BaseDto
+    public abstract class BaseDTO
     {
         #region Properties
         public Int64 ID { get; set; }

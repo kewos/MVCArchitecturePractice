@@ -14,7 +14,7 @@ namespace MVCArchitecturePractice.Host.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            //Resolve Unity Container
+            // Resolve Unity Container
             config.DependencyResolver = new UnityResolver(UnityConfig.Configure());
 
             // Web API configuration and services

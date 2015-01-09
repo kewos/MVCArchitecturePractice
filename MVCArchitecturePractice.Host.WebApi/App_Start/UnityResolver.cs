@@ -10,7 +10,7 @@ using System.Web.Http.Dependencies;
 
 namespace MVCArchitecturePractice.Host.WebApi
 {
-    public class UnityResolver : System.Web.Http.Dependencies.IDependencyResolver
+    public class UnityResolver : IDependencyResolver
     {
         protected IUnityContainer container;
 

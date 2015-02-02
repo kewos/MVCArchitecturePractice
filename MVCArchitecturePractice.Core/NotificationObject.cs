@@ -11,9 +11,7 @@ namespace MVCArchitecturePractice.Core
     public class NotificationObject : INotifyPropertyChanged
     {
         private event PropertyChangedEventHandler propertyChangedEvent;
-
-        protected List<PropertyChangedEventHandler> propertyChangedSubscribers =
-            new List<PropertyChangedEventHandler>();
+        protected List<PropertyChangedEventHandler> propertyChangedSubscribers;
 
         public event PropertyChangedEventHandler PropertyChanged
         {
@@ -30,6 +28,11 @@ namespace MVCArchitecturePractice.Core
                 propertyChangedEvent -= value;
                 propertyChangedSubscribers.Remove(value);
             }
+        }
+
+        public NotificationObject()
+        {
+            propertyChangedSubscribers = new List<PropertyChangedEventHandler>();
         }
 
         protected virtual void OnPropertyChanged(string propertyName)

@@ -16,7 +16,7 @@ namespace MVCArchitecturePractice.Business
         private IUserRepository userRepository;
         private IMessageRepository messageRepository;
 
-        public MessageBoardBusiness(IRepositoryFactory repositoryFactory)
+        public MessageBoardBusiness(IRepositoryFactory repositoryFactory, )
         {
             userRepository = repositoryFactory.GetRepository<IUserRepository>();
             messageRepository = repositoryFactory.GetRepository<IMessageRepository>();

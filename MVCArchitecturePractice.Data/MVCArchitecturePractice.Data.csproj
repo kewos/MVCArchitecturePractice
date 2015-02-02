@@ -116,7 +116,6 @@
     <Compile Include="Repository\RepositoryBase.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="RepositoryFactory.cs" />
-    <Compile Include="UnitOfWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

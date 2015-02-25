@@ -6,7 +6,6 @@ using System.Data.Entity;
 using MVCArchitecturePractice.Data.Contrast.Repository;
 using MVCArchitecturePractice.Data.Contrast.Context;
 using MVCArchitecturePractice.Core;
-using MVCArchitecturePractice.Data.Context;
 
 namespace MVCArchitecturePractice.Data.Repository
 {

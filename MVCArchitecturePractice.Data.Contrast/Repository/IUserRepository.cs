@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using MVCArchitecturePractice.Core.Entity;
+﻿using MVCArchitecturePractice.Core.Entity;
 
 namespace MVCArchitecturePractice.Data.Contrast.Repository
 {

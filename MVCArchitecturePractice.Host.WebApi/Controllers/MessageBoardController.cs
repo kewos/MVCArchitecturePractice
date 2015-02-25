@@ -40,31 +40,7 @@ namespace MVCArchitecturePractice.Host.WebApi.Controllers
         public MessageBoardController(IBusinessFactory BusinessFactory)
         {
             this.messageBoardBusiness = BusinessFactory.GetBusiness<IMessageBoardBusiness>();
-            this.authenticationBusiness = BusinessFactory.GetBusiness<IAuthenticationBusiness>();
         }
-
-        [Route("Login")]
-        public HttpResponseMessage Login([FromBody]UserDTO userDto, bool isRemember = false)
-        {
-            var isValid = authenticationBusiness.UserIsValid(userDto);
-            if (isValid)
-            {
-                var claims = new List<Claim>();
-                claims.Add(new Claim(ClaimTypes.Name, userDto.Name));
-                ClaimsIdentity identity = new ClaimsIdentity(claims, OAuthDefaults.AuthenticationType);
-                Authentication.SignIn(identity);
-                var test = Authentication;
-                return Request.CreateResponse(HttpStatusCode.OK, "Success");
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, "false");
-        }
-
-        private IAuthenticationManager Authentication
-        {
-            get { return Request.GetOwinContext().Authentication; }
-        }
-
-        
 
         [Route("Get_Messages")]
         [HttpGet]

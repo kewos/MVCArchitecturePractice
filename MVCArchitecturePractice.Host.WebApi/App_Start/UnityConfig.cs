@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.Practices.Unity.Mvc;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using MVCArchitecturePractice.Common.Extension;
-using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Core.Contrast;
 using MVCArchitecturePractice.Data;
 using MVCArchitecturePractice.Data.Repository;
 using MVCArchitecturePractice.Data.Contrast.Repository;
-using MVCArchitecturePractice.Data.Contrast.Context;
-using MVCArchitecturePractice.Data.Context;
 using MVCArchitecturePractice.Business;
 using MVCArchitecturePractice.Business.Contrast;
 
@@ -75,7 +68,6 @@ namespace MVCArchitecturePractice.Host.WebApi
         {
             container.RegisterType<IBusinessFactory, BusinessFactory>(new InjectionConstructor(container));
             container.RegisterType<IMessageBoardBusiness, MessageBoardBusiness>();
-            container.RegisterType<IAuthenticationBusiness, AuthenticationBusiness>();
         }
         #endregion
     }

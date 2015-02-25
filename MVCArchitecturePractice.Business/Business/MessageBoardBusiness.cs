@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using MVCArchitecturePractice.Common.DTO;
 using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Core.Contrast;
 using MVCArchitecturePractice.Data.Contrast.Repository;
-using MVCArchitecturePractice.Data.Repository;
 using MVCArchitecturePractice.Business.Contrast;
 using AutoMapper;
 
@@ -16,7 +14,7 @@ namespace MVCArchitecturePractice.Business
         private IUserRepository userRepository;
         private IMessageRepository messageRepository;
 
-        public MessageBoardBusiness(IRepositoryFactory repositoryFactory, )
+        public MessageBoardBusiness(IRepositoryFactory repositoryFactory)
         {
             userRepository = repositoryFactory.GetRepository<IUserRepository>();
             messageRepository = repositoryFactory.GetRepository<IMessageRepository>();
@@ -43,10 +41,7 @@ namespace MVCArchitecturePractice.Business
 
         public void UpdateMessage(MessageDTO messageDTO)
         {
-            //messageDTO.ModifyDate = DateTime.Now;
-            //var destination = messageRepository.GetById(messageDTO.ID);
-            //var RESULT = Mapper.Map(messageDTO, destination);
-            //messageRepository.Update(Mapper.Map(messageDTO, destination));
+
         }
 
         public void DeleteMessage(long id)

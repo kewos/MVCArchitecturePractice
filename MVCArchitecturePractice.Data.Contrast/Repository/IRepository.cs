@@ -1,9 +1,6 @@
-﻿using System.Linq.Expressions;
-using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MVCArchitecturePractice.Common.Attribute;
 using MVCArchitecturePractice.Core;
-using MVCArchitecturePractice.Core.Entity;
 using MVCArchitecturePractice.Core.Contrast;
 
 namespace MVCArchitecturePractice.Data.Contrast.Repository

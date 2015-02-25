@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.Practices.Unity.InterceptionExtension;
-using MVCArchitecturePractice.Common.Aop;
 
 namespace MVCArchitecturePractice.Common.Attribute
 {

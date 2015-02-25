@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MVCArchitecturePractice.Common.DTO;
+﻿using MVCArchitecturePractice.Common.DTO;
 using MVCArchitecturePractice.Core.Entity;
 using AutoMapper;
 

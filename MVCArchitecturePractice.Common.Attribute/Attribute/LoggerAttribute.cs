@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
-using MVCArchitecturePractice.Common.Aop;
 using MVCArchitecturePractice.Common.Utils.Logger;
 
 namespace MVCArchitecturePractice.Common.Attribute
